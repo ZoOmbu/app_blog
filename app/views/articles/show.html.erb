@@ -1,10 +1,11 @@
 <p id="notice"><%= notice %></p>
-
+<h1><%= @article.title.parameterize %></h1>
 <p>
   <strong>Title:</strong>
   <%= @article.title %>
 </p>
 
+need to do correct view of author
 <p>
   <strong>Author:</strong>
   <%= @article.author %>
@@ -14,6 +15,21 @@
   <strong>Text:</strong>
   <%= @article.text %>
 </p>
+
+<h2>Add a comment:</h2>
+<%= form_for(@article.comments.build) do |f| %>
+    <p>
+      <%= f.label :commenter %><br>
+      <%= f.text_field :commenter %>
+    </p>
+    <p>
+      <%= f.label :body %><br>
+      <%= f.text_area :body %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>
 
 <%= link_to 'Edit', edit_article_path(@article) %> |
 <%= link_to 'Back', articles_path %>

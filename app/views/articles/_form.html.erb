@@ -15,12 +15,10 @@
     <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
-
-  <div class="field">
-    <%= f.label :author %>
-    <%= f.text_field :author %>
-  </div>
-
+    <div class="field">
+      <%= f.label :author %>
+      <%= f.text_field :author %>
+    </div>
   <div class="field">
     <%= f.label :text %>
     <%= f.text_area :text %>
@@ -30,3 +28,5 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+<%= link_to 'Main', root_path %>
