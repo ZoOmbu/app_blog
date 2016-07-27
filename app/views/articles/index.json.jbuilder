@@ -1,0 +1,1 @@
+json.array! @articles, partial: 'articles/welcome', as: :welcome

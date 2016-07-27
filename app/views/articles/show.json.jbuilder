@@ -1,0 +1,1 @@
+json.partial! "articles/welcome", welcome: @article
